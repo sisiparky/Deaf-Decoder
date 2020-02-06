@@ -5,7 +5,7 @@ let classifier;
 
 // STEP 1: Load the model!
 function preload() {
-  classifier = ml5.imageclassifier('https://teachablemachine.withgoogle.com/models/2LY6Zvxw/'); 
+  classifier = ml5.imageclassifier('https://teachablemachine.withgoogle.com/models/2LY6Zvxw/');
 }
 
 function setup() {
@@ -21,7 +21,7 @@ function setup() {
 
 function draw() {
   background(0);
-  
+
   // Draw the video
   image(video, 0, 0);
 
