@@ -15,9 +15,14 @@ function setup() {
   video.hide();
 
   // STEP 2: Start classifying
+  classifyVideo();
 }
 
 // STEP 2 classify!
+function classifyVideo() {
+  classifier.classify(video, gotResults);
+}
+
 
 function draw() {
   background(0);
@@ -30,3 +35,10 @@ function draw() {
 
 
 // STEP 3: Get the classification!
+function gotResults(error, results) {
+  if (error) {
+    console.error(error);
+    return;
+  }
+  console.log(results);
+}
